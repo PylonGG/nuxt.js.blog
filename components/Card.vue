@@ -69,6 +69,7 @@ export default Vue.extend({
             margin: 0;
             text-shadow: 1px 1px rgba(18, 19, 36, 0.6);
             width: 80%;
+            margin-bottom: 4px;
         }
 
         p {
