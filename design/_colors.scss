@@ -1,0 +1,28 @@
+$primary: #9a3dff;
+$primary-hover: darken(
+    $color: $primary,
+    $amount: 4%
+);
+$primary-active: darken(
+    $color: $primary,
+    $amount: 6%
+);
+
+$background: #1a1c30;
+$background-lighter: #4c4c60;
+$background-light: #2f2f3b;
+$background-dark: #121220;
+$background-darker: #121324;
+
+$grey-darker: #49496a;
+$grey-dark: #5e5e88;
+$grey: #7777a1;
+$grey-light: #9595b6;
+
+$text-muted: #c6c3da;
+
+$red: #ff4949;
+$gold: #e6af2e;
+$white: #eeeaff;
+$green: #00c968;
+$blue: #216eff;
