@@ -6,8 +6,8 @@
                 <div class="author">
                     <div class="author-image">
                         <svg
-                            width="36"
-                            height="36"
+                            width="32"
+                            height="32"
                             viewBox="0 0 24 24"
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
@@ -28,9 +28,22 @@
                         <div class="author-name">{{ post.author }}</div>
                         <div class="date">{{ date }}</div>
                     </div>
+                    <div class="post-category">
+                        {{ post.category }}
+                    </div>
                 </div>
                 <div class="social-links">
-                    <a href="#">
+                    <div class="social-links-title">Share on</div>
+                    <a
+                        target="_blank"
+                        :href="
+                            'https://twitter.com/intent/tweet?text=' +
+                                post.title +
+                                '&url=https://blog.pylon.gg/' +
+                                post.slug +
+                                ''
+                        "
+                    >
                         <svg
                             role="img"
                             width="24px"
@@ -45,7 +58,13 @@
                             ></path>
                         </svg>
                     </a>
-                    <a href="#">
+                    <a
+                        target="_blank"
+                        :href="
+                            'https://www.linkedin.com/sharing/share-offsite/?url=https://blog.pylon.gg/' +
+                                post.slug
+                        "
+                    >
                         <svg
                             role="img"
                             viewBox="0 0 24 24"
@@ -60,7 +79,12 @@
                             ></path>
                         </svg>
                     </a>
-                    <a href="#"
+                    <a
+                        target="_blank"
+                        :href="
+                            'https://www.facebook.com/sharer/sharer.php?u=https://blog.pylon.gg/' +
+                                post.slug
+                        "
                         ><svg
                             role="img"
                             viewBox="0 0 24 24"
@@ -98,6 +122,74 @@ export default {
         date() {
             return moment(this.post.date).format('MMM Do, YYYY')
         }
+    },
+    head() {
+        return {
+            title: this.post.title + ' | Pylon Blog',
+            meta: [
+                {
+                    hid: 'description',
+                    name: 'description',
+                    content: this.post.description
+                },
+                {
+                    hid: 'author',
+                    name: 'author',
+                    content: this.post.author
+                },
+                {
+                    hid: 'keywords',
+                    name: 'keywords',
+                    content: this.post.keywords
+                },
+                {
+                    hid: 'og:title',
+                    name: 'og:title',
+                    content: this.post.title
+                },
+                {
+                    hid: 'og:description',
+                    name: 'og:description',
+                    content: this.post.description
+                },
+                {
+                    hid: 'og:image',
+                    name: 'og:image',
+                    content: 'https://blog.pylon.gg' + this.post.image
+                },
+                {
+                    hid: 'og:url',
+                    name: 'og:url',
+                    content: 'https://blog.pylon.gg/' + this.post.slug
+                },
+                {
+                    hid: 'twitter:title',
+                    name: 'twitter:title',
+                    content: this.post.title
+                },
+                {
+                    hid: 'twitter:description',
+                    name: 'twitter:description',
+                    content: this.post.description
+                },
+                {
+                    hid: 'twitter:image',
+                    name: 'twitter:image',
+                    content: 'https://blog.pylon.gg' + this.post.image
+                },
+                {
+                    hid: 'twitter:card',
+                    name: 'twitter:card',
+                    content: 'summary_large_image'
+                }
+            ],
+            noscript: [{ innerHTML: 'Body No Scripts', body: true }],
+            script: [
+                { src: '/head.js' },
+                { src: '/body.js', body: true },
+                { src: '/defer.js', defer: '' }
+            ]
+        }
     }
 }
 </script>
@@ -108,6 +200,129 @@ export default {
 .post {
     width: 680px;
     margin: 0 auto;
+    padding-bottom: 30px;
+
+    @media only screen and (max-width: 820px) {
+        width: 350px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    hr {
+        margin: 1.15rem 0;
+        border-color: $text-muted;
+        border-width: 2px;
+        border-style: solid;
+        border-radius: 2px;
+    }
+
+    pre {
+        background: $background-dark;
+        border-radius: 6px;
+        margin-bottom: 1.15rem;
+
+        code {
+            color: $white;
+            text-shadow: none;
+            font-size: 0.8rem;
+
+            .token.operator,
+            .token.entity,
+            .token.url,
+            .language-css .token.string,
+            .style .token.string {
+                color: #9a6e3a;
+                background: none;
+            }
+        }
+    }
+
+    p {
+        img {
+            border-radius: 6px;
+            @include box-shadow;
+            align-self: center;
+            width: 100%;
+            background: $background-dark;
+        }
+    }
+
+    table {
+        width: 100%;
+        border-spacing: 0px;
+        border-radius: 6px;
+        border-collapse: collapse;
+        @include box-shadow;
+
+        th,
+        td {
+            padding: 10px;
+        }
+
+        th {
+            background: $primary;
+            border-bottom: 2px solid $primary-hover;
+
+            &:first-child {
+                -moz-border-radius: 6px 0 0 0;
+                -webkit-border-radius: 6px 0 0 0;
+                border-radius: 6px 0 0 0;
+            }
+
+            &:last-child {
+                -moz-border-radius: 0 6px 0 0;
+                -webkit-border-radius: 0 6px 0 0;
+                border-radius: 0 6px 0 0;
+            }
+        }
+
+        td {
+            color: $text-muted;
+        }
+
+        tr {
+            td {
+                background: lighten($background-darker, 1.5%);
+            }
+
+            &:nth-child(even) {
+                td {
+                    background: $background-darker;
+                }
+            }
+
+            &:not(:last-child) {
+                border-bottom: 1px solid
+                    lighten($color: $background-darker, $amount: 4%);
+            }
+
+            td:not(:last-child) {
+                border-right: 1px solid
+                    lighten($color: $background-darker, $amount: 2.5%);
+            }
+
+            &:last-child {
+                td:first-child {
+                    -moz-border-radius: 0 0 0 6px;
+                    -webkit-border-radius: 0 0 0 6px;
+                    border-radius: 0 0 0 6px;
+                }
+
+                td:last-child {
+                    -moz-border-radius: 0 0 6px 0;
+                    -webkit-border-radius: 0 0 6px 0;
+                    border-radius: 0 0 6px 0;
+                }
+            }
+        }
+    }
+
+    blockquote {
+        border-left: 4px solid $white;
+        border-radius: 4px;
+        padding-left: 20px;
+        color: $text-muted;
+    }
 
     .post-header {
         display: flex;
@@ -115,12 +330,22 @@ export default {
         position: relative;
         margin-bottom: 30px;
 
+        @media only screen and (max-width: 820px) {
+            margin-bottom: 20px;
+        }
+
         h1 {
             font-weight: 600;
             text-align: center;
             margin-bottom: 30px;
             width: 120%;
             align-self: center;
+
+            @media only screen and (max-width: 820px) {
+                font-size: 24px;
+                width: 100%;
+                margin-bottom: 20px;
+            }
         }
 
         .post-image {
@@ -128,23 +353,10 @@ export default {
             border-radius: 12px;
             @include box-shadow;
             align-self: center;
+            background: $background-dark;
 
-            &::before {
-                position: absolute;
-                content: '';
-                background-image: linear-gradient(
-                    0deg,
-                    rgba(18, 19, 36, 0.8) 10%,
-                    rgba(18, 19, 36, 0.75) 25%,
-                    rgba(18, 19, 36, 0.65) 50%,
-                    rgba(18, 19, 36, 0.55) 75%,
-                    rgba(18, 19, 36, 0.4)
-                );
-                top: 0;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                z-index: 0;
+            @media only screen and (max-width: 820px) {
+                width: 100%;
             }
         }
 
@@ -153,7 +365,12 @@ export default {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 1.05rem;
+            margin-bottom: 30px;
+
+            @media only screen and (max-width: 820px) {
+                justify-content: center;
+                margin-bottom: 20px;
+            }
 
             .author {
                 display: flex;
@@ -162,8 +379,8 @@ export default {
 
                 .author-image {
                     background: $primary;
-                    width: 48px;
-                    height: 100%;
+                    width: 42px;
+                    height: 42px;
                     border-radius: 50%;
                     display: flex;
                     justify-content: center;
@@ -182,7 +399,17 @@ export default {
                     .date {
                         color: $text-muted;
                         font-size: 0.8em;
+                        margin-top: -4px;
                     }
+                }
+
+                .post-category {
+                    background: $background-darker;
+                    color: $white;
+                    border-radius: 6px;
+                    padding: 5px 10px;
+                    margin-left: 12px;
+                    font-size: 0.8em;
                 }
             }
 
@@ -190,6 +417,10 @@ export default {
                 height: 100%;
                 display: flex;
                 align-items: center;
+
+                @media only screen and (max-width: 820px) {
+                    display: none;
+                }
 
                 .icon {
                     transition: 0.15s ease-out;
@@ -204,8 +435,7 @@ export default {
                     justify-content: center;
                     align-items: center;
 
-                    &:hover,
-                    &:focus {
+                    &:hover {
                         .icon {
                             fill: $white;
                         }

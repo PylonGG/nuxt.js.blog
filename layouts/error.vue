@@ -1,9 +1,23 @@
 <template>
     <div class="error-page">
-        <Logo width="200px" height="200px"></Logo>
+        <Logo width="150px" height="150px"></Logo>
         <div class="info">
             <h1>Error {{ error.statusCode }}</h1>
-            <p>We must construct additional pylons...</p>
+            <p>"We must construct additional pylons..."</p>
+            <nuxt-link to="/"
+                >Return to saftey
+                <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M15.0378 6.34317L13.6269 7.76069L16.8972 11.0157L3.29211 11.0293L3.29413 13.0293L16.8619 13.0157L13.6467 16.2459L15.0643 17.6568L20.7079 11.9868L15.0378 6.34317Z"
+                        fill="currentColor"
+                    /></svg
+            ></nuxt-link>
         </div>
     </div>
 </template>
@@ -28,28 +42,45 @@ export default {
 @import '@/design';
 
 .error-page {
-    padding-top: 50px !important;
+    padding-top: 90px !important;
     width: 100%;
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 
     .logo {
-        margin-right: 20px;
+        margin-right: 15px;
     }
 
     h1 {
-        font-size: 72px;
-        font-weight: 600;
-        color: $primary;
+        font-size: 48px;
+        font-weight: 700;
+        color: $white;
         margin-bottom: 6px;
     }
 
     p {
-        font-size: 32px;
         color: $text-muted;
-        margin: 0;
+        font-style: italic;
+    }
+
+    a {
+        display: flex;
+        align-items: center;
+        color: $primary;
+        text-decoration: none;
+
+        svg {
+            margin-left: 5px;
+        }
+
+        &:hover {
+            color: $primary-hover;
+        }
+
+        &:active {
+            color: $primary-active;
+        }
     }
 }
 </style>

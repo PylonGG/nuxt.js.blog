@@ -4,7 +4,7 @@ export default {
      ** Headers of the page
      */
     head: {
-        title: process.env.npm_package_name || '',
+        title: process.env.npm_package_name || 'Pylon Blog',
         meta: [
             { charset: 'utf-8' },
             {
@@ -17,12 +17,49 @@ export default {
                 content: process.env.npm_package_description || ''
             }
         ],
-        link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+        link: [
+            { rel: 'icon', type: 'image/x-icon', href: 'icons/favicon.ico' },
+            {
+                rel: 'icon',
+                type: 'image/png',
+                sizes: '16x16',
+                href: 'icons/favicon-16x16.png'
+            },
+            {
+                rel: 'icon',
+                type: 'image/png',
+                sizes: '32x32',
+                href: 'icons/favicon-32x32.png'
+            },
+            {
+                rel: 'apple-touch-icon',
+                type: 'image/png',
+                sizes: '180x180',
+                href: 'icons/apple-touch-icon.png'
+            },
+            {
+                rel: 'manifest',
+                href: '/site.webmanifest'
+            },
+            {
+                rel: 'mask-icon',
+                href: '/safari-pinned-tab.svg',
+                color: '#9a3dff'
+            },
+            {
+                name: 'msapplication-TileColor',
+                content: '#f6f6f6'
+            },
+            {
+                name: 'theme-color',
+                content: '#9a3dff'
+            }
+        ]
     },
     /*
      ** Customize the progress-bar color
      */
-    loading: { color: '#fff' },
+    loading: { color: '#9a3dff' },
     /*
      ** Global CSS
      */

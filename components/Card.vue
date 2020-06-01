@@ -44,6 +44,15 @@ export default Vue.extend({
     text-decoration: none;
     color: $white;
 
+    @media only screen and (max-width: 692px) {
+        height: 175px;
+
+        h3 {
+            font-size: 1.4em;
+            width: 90% !important;
+        }
+    }
+
     &:hover,
     &:focus {
         background-size: 103%;

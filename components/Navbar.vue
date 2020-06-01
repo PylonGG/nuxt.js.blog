@@ -49,21 +49,19 @@
             </a>
             <a target="_blank" href="https://twitter.com/PyIonGG">
                 <svg
-                    width="16"
-                    height="16"
+                    role="img"
+                    width="16px"
+                    height="16px"
                     viewBox="0 0 24 24"
-                    fill="none"
                     xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
                 >
                     <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M8 3C9.10457 3 10 3.89543 10 5V8H16C17.1046 8 18 8.89543 18 10C18 11.1046 17.1046 12 16 12H10V14C10 15.6569 11.3431 17 13 17H16C17.1046 17 18 17.8954 18 19C18 20.1046 17.1046 21 16 21H13C9.13401 21 6 17.866 6 14V5C6 3.89543 6.89543 3 8 3Z"
-                        fill="currentColor"
-                    />
+                        d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"
+                    ></path>
                 </svg>
             </a>
-            <a href="#">
+            <!-- <a href="#">
                 <svg
                     width="16"
                     height="16"
@@ -84,7 +82,31 @@
                         fill="currentColor"
                     />
                 </svg>
-            </a>
+            </a> -->
+        </div>
+        <div class="mobile-dropdown-button">
+            <button @click="dropdownOpen = !dropdownOpen">
+                <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M2 6C2 5.44772 2.44772 5 3 5H21C21.5523 5 22 5.44772 22 6C22 6.55228 21.5523 7 21 7H3C2.44772 7 2 6.55228 2 6Z"
+                        fill="currentColor"
+                    />
+                    <path
+                        d="M2 12.0322C2 11.4799 2.44772 11.0322 3 11.0322H21C21.5523 11.0322 22 11.4799 22 12.0322C22 12.5845 21.5523 13.0322 21 13.0322H3C2.44772 13.0322 2 12.5845 2 12.0322Z"
+                        fill="currentColor"
+                    />
+                    <path
+                        d="M3 17.0645C2.44772 17.0645 2 17.5122 2 18.0645C2 18.6167 2.44772 19.0645 3 19.0645H21C21.5523 19.0645 22 18.6167 22 18.0645C22 17.5122 21.5523 17.0645 21 17.0645H3Z"
+                        fill="currentColor"
+                    />
+                </svg>
+            </button>
         </div>
     </div>
 </template>
@@ -97,6 +119,11 @@ import Logo from '@/components/Logo.vue'
 export default Vue.extend({
     components: {
         Logo
+    },
+    data: () => {
+        return {
+            dropdownOpen: false
+        }
     }
 })
 </script>
@@ -118,6 +145,12 @@ export default Vue.extend({
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
     overflow: hidden;
+
+    @media only screen and (max-width: 1024px) {
+        width: 100%;
+        border-radius: 0;
+        justify-content: space-between;
+    }
 
     .logo-container {
         display: flex;
@@ -154,47 +187,70 @@ export default Vue.extend({
         }
     }
 
-    .col-1-3 {
-        width: 33.3%;
+    .left {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 15%;
 
-        &.left {
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
+        .logo-container {
+            height: 100%;
+            padding: 0 10px;
+            background: $primary;
+            margin-right: 15px;
 
-            .logo-container {
-                height: 100%;
-                padding: 0 10px;
-                background: $primary;
-                margin-right: 15px;
+            &:hover {
+                background: darken($color: $primary, $amount: 4%);
+            }
 
-                &:hover {
-                    background: darken($color: $primary, $amount: 4%);
-                }
-
-                &:active {
-                    background: darken($color: $primary, $amount: 6.5%);
-                }
+            &:active {
+                background: darken($color: $primary, $amount: 6.5%);
             }
         }
+    }
 
-        &.center {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+    .center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 70%;
+
+        @media only screen and (max-width: 820px) {
+            display: none;
+        }
+    }
+
+    .right {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 10px;
+        position: relative;
+        width: 15%;
+
+        @media only screen and (max-width: 820px) {
+            display: none;
         }
 
-        &.right {
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            padding-right: 10px;
-            position: relative;
+        a {
+            padding: 0 6px;
+            margin: 0;
+        }
+    }
 
-            a {
-                padding: 0 6px;
-                margin: 0;
-            }
+    .mobile-dropdown-button {
+        display: none;
+
+        button {
+            border: 0;
+            background: transparent;
+            height: 100%;
+            width: 50px;
+            color: $text-muted;
+        }
+
+        @media only screen and (max-width: 820px) {
+            display: block;
         }
     }
 }
