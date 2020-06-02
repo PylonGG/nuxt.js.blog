@@ -48,8 +48,17 @@ export default {
     justify-content: center;
     align-items: center;
 
+    @media only screen and (max-width: 692px) {
+        flex-direction: column;
+    }
+
     .logo {
         margin-right: 15px;
+
+        @media only screen and (max-width: 692px) {
+            margin-right: 0;
+            margin-bottom: 30px;
+        }
     }
 
     h1 {

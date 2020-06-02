@@ -85,8 +85,9 @@
             </a> -->
         </div>
         <div class="mobile-dropdown-button">
-            <button @click="dropdownOpen = !dropdownOpen">
+            <button @click="show = !show">
                 <svg
+                    v-if="!show"
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
@@ -106,8 +107,81 @@
                         fill="currentColor"
                     />
                 </svg>
+                <svg
+                    v-if="show"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M6.2253 4.81108C5.83477 4.42056 5.20161 4.42056 4.81108 4.81108C4.42056 5.20161 4.42056 5.83477 4.81108 6.2253L10.5858 12L4.81114 17.7747C4.42062 18.1652 4.42062 18.7984 4.81114 19.1889C5.20167 19.5794 5.83483 19.5794 6.22535 19.1889L12 13.4142L17.7747 19.1889C18.1652 19.5794 18.7984 19.5794 19.1889 19.1889C19.5794 18.7984 19.5794 18.1652 19.1889 17.7747L13.4142 12L19.189 6.2253C19.5795 5.83477 19.5795 5.20161 19.189 4.81108C18.7985 4.42056 18.1653 4.42056 17.7748 4.81108L12 10.5858L6.2253 4.81108Z"
+                        fill="currentColor"
+                    />
+                </svg>
             </button>
         </div>
+        <transition name="expand">
+            <div v-if="show" class="mobile-navbar">
+                <mobile-nav-links>
+                    <nuxt-link to="/">
+                        <span>All</span>
+                    </nuxt-link>
+                    <nuxt-link to="/engineering">
+                        <span>Engineering</span>
+                    </nuxt-link>
+                    <nuxt-link to="/community">
+                        <span>Community</span>
+                    </nuxt-link>
+                    <nuxt-link to="/press">
+                        <span>Press</span>
+                    </nuxt-link>
+                </mobile-nav-links>
+                <div class="mobile-social-links">
+                    <a target="_blank" href="https://instagram.com/pylongg">
+                        <svg
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M12 7C9.23858 7 7 9.23858 7 12C7 14.7614 9.23858 17 12 17C14.7614 17 17 14.7614 17 12C17 9.23858 14.7614 7 12 7ZM9 12C9 13.6569 10.3431 15 12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12Z"
+                                fill="currentColor"
+                            />
+                            <path
+                                d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z"
+                                fill="currentColor"
+                            />
+                            <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M5 1C2.79086 1 1 2.79086 1 5V19C1 21.2091 2.79086 23 5 23H19C21.2091 23 23 21.2091 23 19V5C23 2.79086 21.2091 1 19 1H5ZM19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3Z"
+                                fill="currentColor"
+                            />
+                        </svg>
+                    </a>
+                    <a target="_blank" href="https://twitter.com/PyIonGG">
+                        <svg
+                            role="img"
+                            width="16px"
+                            height="16px"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="currentColor"
+                        >
+                            <path
+                                d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"
+                            ></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </transition>
     </div>
 </template>
 
@@ -122,7 +196,12 @@ export default Vue.extend({
     },
     data: () => {
         return {
-            dropdownOpen: false
+            show: false
+        }
+    },
+    watch: {
+        $route(to, from) {
+            this.show = false
         }
     }
 })
@@ -130,6 +209,15 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 @import '@/design';
+
+.expand-enter-active,
+.expand-leave-active {
+    transition: all 0.5s;
+}
+.expand-enter,
+.expand-leave-to {
+    transform: translate(100%, 0);
+}
 
 .navbar {
     z-index: 999;
@@ -146,10 +234,58 @@ export default Vue.extend({
     border-bottom-right-radius: 6px;
     overflow: hidden;
 
+    .mobile-navbar {
+        position: absolute;
+        top: 50px;
+        width: 100%;
+        height: calc(100vh - 50px);
+        background: $background-darker;
+        display: none;
+        z-index: 99;
+
+        .mobile-social-links {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        @media only screen and (max-width: 692px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+
+            a:not(.logo-container) {
+                display: flex;
+                height: 72px;
+                padding: 0 20px;
+                margin: 0 10px;
+                font-size: 1.4rem;
+                color: $white;
+                text-decoration: none;
+                transition: 0.1s ease-in-out;
+
+                &:hover,
+                &:focus {
+                    color: $primary;
+                }
+
+                &.nuxt-link-exact-active {
+                    color: $primary;
+                }
+            }
+        }
+    }
+
     @media only screen and (max-width: 1024px) {
         width: 100%;
         border-radius: 0;
         justify-content: space-between;
+    }
+
+    @media only screen and (max-width: 692px) {
+        overflow: visible;
     }
 
     .logo-container {

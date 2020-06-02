@@ -45,12 +45,7 @@ export default {
                     'Pylon, Pylon.gg, Gaming, Gaming Social Media, Technology Blog, Gaming Blog, Development Blog, Nuxt.js, SCSS'
             }
         ],
-        noscript: [{ innerHTML: 'Body No Scripts', body: true }],
-        script: [
-            { src: '/head.js' },
-            { src: '/body.js', body: true },
-            { src: '/defer.js', defer: '' }
-        ]
+        noscript: [{ innerHTML: 'Body No Scripts', body: true }]
     }
 }
 </script>

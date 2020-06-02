@@ -51,6 +51,10 @@ export default Vue.extend({
             font-size: 1.4em;
             width: 90% !important;
         }
+
+        &::before {
+            filter: blur(9px);
+        }
     }
 
     &:hover,
