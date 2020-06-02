@@ -34,7 +34,7 @@ export default Vue.extend({
     display: block;
     height: 300px;
     position: relative;
-    border-radius: 12px;
+    border-radius: 6px;
     overflow: hidden;
     @include box-shadow;
     cursor: pointer;
@@ -43,6 +43,7 @@ export default Vue.extend({
     transition: 0.1s ease-out;
     text-decoration: none;
     color: $white;
+    margin-bottom: 15px;
 
     @media only screen and (max-width: 692px) {
         height: 175px;

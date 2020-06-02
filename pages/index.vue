@@ -7,20 +7,97 @@
                     :key="post.path"
                     :post="post"
                 ></Card>
+                <a
+                    href="/introducing-pylon"
+                    class="card"
+                    style='background-image: url("/welcome.jpg");'
+                    data-v-f883d62a=""
+                    ><div class="card-info" data-v-f883d62a="">
+                        <h3 data-v-f883d62a="">
+                            Welcome to Pylon, a gaming and technology based
+                            discussion platform
+                        </h3>
+                        <p data-v-f883d62a="">
+                            By Brett Kubiak on 05/31/2020 in Press
+                        </p>
+                    </div></a
+                >
+                <a
+                    href="/introducing-pylon"
+                    class="card"
+                    style='background-image: url("/welcome.jpg");'
+                    data-v-f883d62a=""
+                    ><div class="card-info" data-v-f883d62a="">
+                        <h3 data-v-f883d62a="">
+                            Welcome to Pylon, a gaming and technology based
+                            discussion platform
+                        </h3>
+                        <p data-v-f883d62a="">
+                            By Brett Kubiak on 05/31/2020 in Press
+                        </p>
+                    </div></a
+                >
+                <a
+                    href="/introducing-pylon"
+                    class="card"
+                    style='background-image: url("/welcome.jpg");'
+                    data-v-f883d62a=""
+                    ><div class="card-info" data-v-f883d62a="">
+                        <h3 data-v-f883d62a="">
+                            Welcome to Pylon, a gaming and technology based
+                            discussion platform
+                        </h3>
+                        <p data-v-f883d62a="">
+                            By Brett Kubiak on 05/31/2020 in Press
+                        </p>
+                    </div></a
+                >
+                <a
+                    href="/introducing-pylon"
+                    class="card"
+                    style='background-image: url("/welcome.jpg");'
+                    data-v-f883d62a=""
+                    ><div class="card-info" data-v-f883d62a="">
+                        <h3 data-v-f883d62a="">
+                            Welcome to Pylon, a gaming and technology based
+                            discussion platform
+                        </h3>
+                        <p data-v-f883d62a="">
+                            By Brett Kubiak on 05/31/2020 in Press
+                        </p>
+                    </div></a
+                >
+                <a
+                    href="/introducing-pylon"
+                    class="card"
+                    style='background-image: url("/welcome.jpg");'
+                    data-v-f883d62a=""
+                    ><div class="card-info" data-v-f883d62a="">
+                        <h3 data-v-f883d62a="">
+                            Welcome to Pylon, a gaming and technology based
+                            discussion platform
+                        </h3>
+                        <p data-v-f883d62a="">
+                            By Brett Kubiak on 05/31/2020 in Press
+                        </p>
+                    </div></a
+                >
             </div>
-            <div class="col-md-4 hidden-sm"></div>
+            <div class="sidebar col-md-4 hidden-sm">
+                <Newsletter></Newsletter>
+            </div>
         </div>
     </div>
 </template>
 
 <script>
 import Card from '@/components/Card.vue'
-// import Box from '@/components/Box.vue'
+import Newsletter from '@/components/Newsletter.vue'
 
 export default {
     components: {
-        Card
-        // Box
+        Card,
+        Newsletter
     },
     async asyncData({ $content }) {
         const posts = await $content().fetch()
@@ -61,6 +138,11 @@ export default {
         justify-content: space-between;
         padding-left: 20px;
         padding-right: 20px;
+    }
+
+    .sidebar {
+        position: relative;
+        width: inherit;
     }
 }
 </style>

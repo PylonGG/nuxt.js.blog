@@ -34,6 +34,24 @@ export default {
             type: Object,
             default: null
         }
+    },
+    head: {
+        title: `Error | Pylon Blog`,
+        meta: [
+            {
+                hid: 'description',
+                name: 'description',
+                content:
+                    'Official Pylon blog. Pylon is a gaming and technology based discussion platform. Read the latest development information for Pylon.'
+            },
+            {
+                hid: 'keywords',
+                name: 'keywords',
+                content:
+                    'Pylon, Pylon.gg, Gaming, Gaming Social Media, Technology Blog, Gaming Blog, Development Blog, Nuxt.js, SCSS'
+            }
+        ],
+        noscript: [{ innerHTML: 'Body No Scripts', body: true }]
     }
 }
 </script>

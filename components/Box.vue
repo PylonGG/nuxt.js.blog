@@ -3,20 +3,19 @@
 </template>
 
 <script>
-import Vue from 'vue'
-export default Vue.extend({
+export default {
     name: 'Box',
     props: {}
-})
+}
 </script>
 
 <style lang="scss" scoped>
 @import '@/design';
 
 .py_box {
-    background: lighten($color: $background, $amount: 7.5%);
-    padding: 28px;
+    background: $background;
+    padding: 15px;
     border-radius: 6px;
-    @include box-shadow;
+    // @include box-shadow;
 }
 </style>
