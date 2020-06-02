@@ -31,8 +31,7 @@
 </template>
 
 <script>
-import Vue from 'vue'
-export default Vue.extend({
+export default {
     name: 'Logo',
     props: {
         width: {
@@ -46,7 +45,7 @@ export default Vue.extend({
         nav: Boolean,
         background: Boolean
     }
-})
+}
 </script>
 
 <style lang="scss" scoped>

@@ -251,8 +251,7 @@ export default {
                     name: 'twitter:card',
                     content: 'summary_large_image'
                 }
-            ],
-            noscript: [{ innerHTML: 'Body No Scripts', body: true }]
+            ]
         }
     }
 }
@@ -290,7 +289,7 @@ export default {
         left: 0;
         right: 0;
         height: 50px;
-        background: lighten($background, 2.5%);
+        background: $background;
 
         @media only screen and (max-width: 692px) {
             display: flex;

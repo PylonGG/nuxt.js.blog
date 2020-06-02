@@ -50,8 +50,7 @@ export default {
                 content:
                     'Pylon, Pylon.gg, Gaming, Gaming Social Media, Technology Blog, Gaming Blog, Development Blog, Nuxt.js, SCSS'
             }
-        ],
-        noscript: [{ innerHTML: 'Body No Scripts', body: true }]
+        ]
     }
 }
 </script>

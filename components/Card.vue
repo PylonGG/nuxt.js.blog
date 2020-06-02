@@ -7,24 +7,28 @@
     >
         <div class="card-info">
             <h3>{{ post.title }}</h3>
-            <p>
-                By {{ post.author }} on {{ post.date }} in {{ post.category }}
-            </p>
+            <p>By {{ post.author }} on {{ date }} in {{ post.category }}</p>
         </div>
     </nuxt-link>
 </template>
 
 <script>
-import Vue from 'vue'
-export default Vue.extend({
+import moment from 'moment'
+
+export default {
     name: 'Card',
     props: {
         post: {
             type: Object,
             default: null
         }
+    },
+    computed: {
+        date() {
+            return moment(this.post.date).format('MMM Do, YYYY')
+        }
     }
-})
+}
 </script>
 
 <style lang="scss" scoped>

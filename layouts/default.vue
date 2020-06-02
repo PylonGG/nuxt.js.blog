@@ -6,15 +6,13 @@
 </template>
 
 <script>
-import Vue from 'vue'
-
 import Navbar from '@/components/Navbar.vue'
 
-export default Vue.extend({
+export default {
     components: {
         Navbar
     }
-})
+}
 </script>
 
 <style lang="scss">
@@ -43,6 +41,21 @@ body {
 .main {
     padding-top: 80px;
 }
+
+a {
+    color: $primary;
+    text-decoration: none;
+    transition: 0.15s ease-out;
+
+    &:hover {
+        color: $primary-hover;
+    }
+
+    &:active {
+        color: $primary-active;
+    }
+}
+
 p {
     margin-bottom: 1.15rem;
 }
