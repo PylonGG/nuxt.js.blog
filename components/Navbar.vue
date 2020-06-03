@@ -246,6 +246,14 @@ export default {
         display: none;
         z-index: 99;
 
+        .mobile-nav-links {
+            width: 100%;
+        }
+
+        .py_newsletter {
+            margin-bottom: 10px;
+        }
+
         .mobile-social-links {
             width: 100%;
             display: flex;
@@ -268,6 +276,11 @@ export default {
                 color: $white;
                 text-decoration: none;
                 transition: 0.1s ease-in-out;
+
+                svg {
+                    width: 24px;
+                    height: 24px;
+                }
 
                 &:hover,
                 &:focus {

@@ -66,22 +66,12 @@ export default {
         color: $text-muted;
     }
 
-    ::-webkit-input-placeholder {
-        /* Chrome/Opera/Safari */
-        color: $text-muted;
-    }
-    ::-moz-placeholder {
-        /* Firefox 19+ */
-        color: $text-muted;
-        opacity: 1;
-    }
-    :-ms-input-placeholder {
-        /* IE 10+ */
-        color: $text-muted;
-    }
+    ::-webkit-input-placeholder,
+    ::-moz-placeholder,
+    :-ms-input-placeholder,
     :-moz-placeholder {
-        /* Firefox 18- */
-        color: $text-muted;
+        color: $background-darker;
+        opacity: 0.5;
     }
 
     .input-box {
@@ -91,9 +81,9 @@ export default {
 
         input {
             border: 0;
-            background: $background-dark;
+            background: $white;
             font-size: 1em;
-            color: $white;
+            color: $background-darker;
             padding: 10px;
             border-top-left-radius: 6px;
             border-bottom-left-radius: 6px;

@@ -39,7 +39,7 @@ body {
 }
 
 .main {
-    padding-top: 80px;
+    padding-top: 75px;
 }
 
 a {

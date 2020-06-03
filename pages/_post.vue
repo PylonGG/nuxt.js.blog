@@ -189,7 +189,7 @@ export default {
     },
     computed: {
         date() {
-            return moment(this.post.date).format('MMM Do, YYYY')
+            return moment(this.post.createdAt).format('MMM Do, YYYY')
         }
     },
     head() {

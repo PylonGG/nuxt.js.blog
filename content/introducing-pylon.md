@@ -1,7 +1,6 @@
 ---
-title: Welcome to Pylon, a gaming and technology based discussion platform
+title: Introducing Pylon, a gaming and technology based discussion platform
 description: Learn about Pylon and our plans for development.
-date: 05/31/2020
 author: Brett Kubiak
 category: Press
 image: /welcome.jpg

@@ -7,7 +7,7 @@
                 Have an idea for a post? Let us know
                 <a
                     target="_blank"
-                    href="https://github.com/PylonGG/nuxt.js.webapp/issues"
+                    href="https://github.com/PylonGG/nuxt.js.blog/issues/new"
                     >here</a
                 >
             </p>

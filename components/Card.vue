@@ -25,7 +25,7 @@ export default {
     },
     computed: {
         date() {
-            return moment(this.post.date).format('MMM Do, YYYY')
+            return moment(this.post.createdAt).format('MMM Do, YYYY')
         }
     }
 }
@@ -50,11 +50,15 @@ export default {
     margin-bottom: 15px;
 
     @media only screen and (max-width: 692px) {
-        height: 175px;
+        height: 200px;
 
         h3 {
-            font-size: 1.4em;
+            font-size: 1.2em;
             width: 90% !important;
+        }
+
+        p {
+            font-size: 0.8em;
         }
 
         &::before {
