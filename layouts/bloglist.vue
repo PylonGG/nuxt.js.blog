@@ -43,7 +43,7 @@ export default {
         position: relative;
         width: inherit;
 
-        @media screen and (max-width: 692px) {
+        @media screen and (max-width: 64em) {
             display: none;
         }
     }

@@ -274,6 +274,11 @@ export default {
         font-weight: 600;
     }
 
+    p,
+    li {
+        color: $text-muted;
+    }
+
     @media only screen and (max-width: 692px) {
         padding-bottom: 60px;
         width: 100% !important;
