@@ -21,7 +21,11 @@
             </nuxt-link>
         </div>
         <div class="col-1-3 right">
-            <a target="_blank" href="https://instagram.com/pylongg">
+            <a
+                rel="noreferrer"
+                target="_blank"
+                href="https://instagram.com/pylongg"
+            >
                 <svg
                     width="16"
                     height="16"
@@ -47,7 +51,11 @@
                     />
                 </svg>
             </a>
-            <a target="_blank" href="https://twitter.com/PyIonGG">
+            <a
+                rel="noreferrer"
+                target="_blank"
+                href="https://twitter.com/PyIonGG"
+            >
                 <svg
                     role="img"
                     width="16px"
@@ -85,7 +93,7 @@
             </a> -->
         </div>
         <div class="mobile-dropdown-button">
-            <button @click="show = !show">
+            <button aria-label="Show/Hide Mobile Menu" @click="show = !show">
                 <svg
                     v-if="!show"
                     width="24"

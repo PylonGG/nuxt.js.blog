@@ -7,7 +7,7 @@
         </p>
         <div class="input-box">
             <input placeholder="Enter your email" type="email" />
-            <button>
+            <button aria-label="Submit Email">
                 <svg
                     width="24"
                     height="24"

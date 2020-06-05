@@ -6,6 +6,7 @@
             <p>
                 Have an idea for a post? Let us know
                 <a
+                    rel="noreferrer"
                     target="_blank"
                     href="https://github.com/PylonGG/nuxt.js.blog/issues/new"
                     >here</a
@@ -52,6 +53,7 @@ export default {
 .oops {
     h2 {
         margin-top: 0;
+        margin-bottom: 4px;
     }
 
     p {

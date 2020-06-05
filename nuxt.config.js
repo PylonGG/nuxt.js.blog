@@ -18,32 +18,32 @@ export default {
             }
         ],
         link: [
-            { rel: 'icon', type: 'image/x-icon', href: 'icons/favicon.ico' },
+            { rel: 'icon', type: 'image/x-icon', href: './icons/favicon.ico' },
             {
                 rel: 'icon',
                 type: 'image/png',
                 sizes: '16x16',
-                href: 'icons/favicon-16x16.png'
+                href: './icons/favicon-16x16.png'
             },
             {
                 rel: 'icon',
                 type: 'image/png',
                 sizes: '32x32',
-                href: 'icons/favicon-32x32.png'
+                href: './icons/favicon-32x32.png'
             },
             {
                 rel: 'apple-touch-icon',
                 type: 'image/png',
                 sizes: '180x180',
-                href: 'icons/apple-touch-icon.png'
+                href: './icons/apple-touch-icon.png'
             },
             {
                 rel: 'manifest',
-                href: '/site.webmanifest'
+                href: './icons/site.webmanifest'
             },
             {
                 rel: 'mask-icon',
-                href: '/safari-pinned-tab.svg',
+                href: './icons/safari-pinned-tab.svg',
                 color: '#9a3dff'
             },
             {
@@ -99,5 +99,8 @@ export default {
                 file.path === '/index' ? '/' : file.path
             )
         }
+    },
+    router: {
+        prefetchLinks: false
     }
 }

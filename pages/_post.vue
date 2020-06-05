@@ -35,6 +35,7 @@
                 <div class="social-links">
                     <div class="social-links-title">Share on</div>
                     <a
+                        rel="noreferrer"
                         target="_blank"
                         :href="
                             'https://twitter.com/intent/tweet?text=' +
@@ -59,6 +60,7 @@
                         </svg>
                     </a>
                     <a
+                        rel="noreferrer"
                         target="_blank"
                         :href="
                             'https://www.linkedin.com/sharing/share-offsite/?url=https://blog.pylon.gg/' +
@@ -80,6 +82,7 @@
                         </svg>
                     </a>
                     <a
+                        rel="noreferrer"
                         target="_blank"
                         :href="
                             'https://www.facebook.com/sharer/sharer.php?u=https://blog.pylon.gg/' +
@@ -107,6 +110,7 @@
             <div class="social-links-title">Share on</div>
             <div class="mobile-social-links-container">
                 <a
+                    rel="noreferrer"
                     target="_blank"
                     :href="
                         'https://twitter.com/intent/tweet?text=' +
@@ -131,6 +135,7 @@
                     </svg>
                 </a>
                 <a
+                    rel="noreferrer"
                     target="_blank"
                     :href="
                         'https://www.linkedin.com/sharing/share-offsite/?url=https://blog.pylon.gg/' +
@@ -152,6 +157,7 @@
                     </svg>
                 </a>
                 <a
+                    rel="noreferrer"
                     target="_blank"
                     :href="
                         'https://www.facebook.com/sharer/sharer.php?u=https://blog.pylon.gg/' +
