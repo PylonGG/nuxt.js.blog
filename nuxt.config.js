@@ -101,6 +101,7 @@ export default {
         }
     },
     router: {
-        prefetchLinks: false
+        prefetchLinks: false,
+        trailingSlash: false
     }
 }

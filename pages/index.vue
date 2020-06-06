@@ -15,6 +15,12 @@ export default {
     async asyncData({ $content }) {
         const posts = await $content().fetch()
 
+        const files = await $content()
+            .only(['path'])
+            .fetch()
+
+        console.log(files)
+
         return {
             posts
         }
