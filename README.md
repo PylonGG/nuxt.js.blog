@@ -61,6 +61,7 @@ description: Description of the blog post
 author: John Deere
 category: Github
 image: /image.jpg
+date: 04/28/20
 ---
 ```
 
@@ -80,6 +81,7 @@ The above YAML front matter will inject the following variables:
   image: "/image.jpg"
   author: "John Deere"
   category: "Github"
+  date: "04/28/20"
   dir: "/"
   extension: ".md"
   path: "/name-of-file"

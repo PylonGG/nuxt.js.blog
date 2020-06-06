@@ -182,7 +182,7 @@
 </template>
 
 <script>
-import moment from 'moment'
+import dayjs from 'dayjs'
 
 export default {
     components: {},
@@ -195,7 +195,7 @@ export default {
     },
     computed: {
         date() {
-            return moment(this.post.createdAt).format('MMM Do, YYYY')
+            return dayjs(this.post.date).format('MMM D, YYYY')
         }
     },
     head() {

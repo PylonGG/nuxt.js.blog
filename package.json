@@ -13,7 +13,7 @@
     },
     "dependencies": {
         "@nuxt/content": "^1.2.0",
-        "moment": "^2.26.0",
+        "dayjs": "^1.8.28",
         "nuxt": "^2.0.0"
     },
     "devDependencies": {
