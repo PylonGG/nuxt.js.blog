@@ -3,7 +3,7 @@
     <h1 style="margin-top:4px;">Pylon Blog</h1>
 </div>
 
-> This is the official repository for the [Pylon blog](https://blog.pylon.gg). This project is built with Nuxt.js, Nuxt.js Content, Moment.js, SASS, Prettier, and ESLint.
+> This is the official repository for the [Pylon blog](https://blog.pylon.gg). This project is built with Nuxt.js, Nuxt.js Content, Markdown, SASS, Prettier, and ESLint.
 >
 > Feedback, enhancements, and post suggestions are all welcome 😄, please see our contribution guide for information on how to add to this project!
 
