@@ -1,4 +1,4 @@
-<img align="center" width="200px" src="https://i.imgur.com/ZZNnLBK.png" />
+<p align="center"><img align="center" width="200px" src="https://i.imgur.com/ZZNnLBK.png" /></p>
 <h1 align="center" style="margin-top:4px;">Pylon Blog</h1>
 
 > This is the official repository for the [Pylon blog](https://blog.pylon.gg). This project is built with Nuxt.js, Nuxt.js Content, Markdown, SASS, Prettier, and ESLint.
