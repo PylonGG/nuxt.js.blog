@@ -73,12 +73,13 @@ export default {
      */
     buildModules: [
         // Doc: https://github.com/nuxt-community/eslint-module
-        '@nuxtjs/eslint-module'
+        '@nuxtjs/eslint-module',
+        '@nuxtjs/axios'
     ],
     /*
      ** Nuxt.js modules
      */
-    modules: ['@nuxt/content'],
+    modules: ['@nuxt/content', '@nuxtjs/axios'],
     /*
      ** Build configuration
      */
@@ -88,18 +89,6 @@ export default {
          */
         extend(config, ctx) {}
     },
-    // generate: {
-    //     async routes() {
-    //         const { $content } = require('@nuxt/content')
-    //         const files = await $content()
-    //             .only(['path'])
-    //             .fetch()
-
-    //         return files.map((file) =>
-    //             file.path === '/index' ? '/' : file.path
-    //         )
-    //     }
-    // },
     router: {
         prefetchLinks: false
     }

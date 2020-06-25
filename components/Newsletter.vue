@@ -6,8 +6,12 @@
             join our exclusive closed beta.
         </p>
         <div class="input-box">
-            <input placeholder="Enter your email" type="email" />
-            <button aria-label="Submit Email">
+            <input
+                v-model="email"
+                placeholder="Enter your email"
+                type="email"
+            />
+            <button aria-label="Submit Email" @click="submitEmail()">
                 <svg
                     width="24"
                     height="24"
@@ -22,10 +26,15 @@
                 </svg>
             </button>
         </div>
+        <p v-if="message" :class="message.type" class="message">
+            {{ message.text }}
+        </p>
     </div>
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
     name: 'Newsletter',
     components: {},
@@ -33,6 +42,53 @@ export default {
         nav: {
             type: Boolean,
             default: false
+        }
+    },
+    data: () => {
+        return {
+            email: '',
+            message: {}
+        }
+    },
+    methods: {
+        submitEmail() {
+            this.message = {}
+
+            if (this.email !== '') {
+                if (!this.isEmail(this.email)) {
+                    this.message = {
+                        type: 'error',
+                        text: 'Not a valid email address.'
+                    }
+                    return
+                }
+
+                axios
+                    .post('https://beta-api.pylon.gg/collectemail', {
+                        email: this.email
+                    })
+                    .then((response) => {
+                        this.message = {
+                            type: 'success',
+                            text: 'Successfully signed up!'
+                        }
+                    })
+                    .catch(() => {
+                        this.message = {
+                            type: 'error',
+                            text: 'Something went wrong, try again!'
+                        }
+                    })
+            } else {
+                this.message = {
+                    type: 'error',
+                    text: 'The email field is required.'
+                }
+            }
+        },
+        isEmail(email) {
+            const re = /\S+@\S+\.\S+/
+            return re.test(String(email).toLowerCase())
         }
     }
 }
@@ -64,6 +120,18 @@ export default {
     p {
         margin-top: 6px;
         color: $text-muted;
+    }
+
+    .message {
+        text-align: center;
+    }
+
+    .error {
+        color: $red;
+    }
+
+    .success {
+        color: $green;
     }
 
     ::-webkit-input-placeholder,
