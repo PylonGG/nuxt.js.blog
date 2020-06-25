@@ -23,27 +23,27 @@ export default {
                 rel: 'icon',
                 type: 'image/png',
                 sizes: '16x16',
-                href: './icons/favicon-16x16.png'
+                href: 'https://beta-cdn.pylon.gg/icons/favicon-16x16.png'
             },
             {
                 rel: 'icon',
                 type: 'image/png',
                 sizes: '32x32',
-                href: './icons/favicon-32x32.png'
+                href: 'https://beta-cdn.pylon.gg/icons/favicon-32x32.png'
             },
             {
                 rel: 'apple-touch-icon',
                 type: 'image/png',
                 sizes: '180x180',
-                href: './icons/apple-touch-icon.png'
+                href: 'https://beta-cdn.pylon.gg/icons/apple-touch-icon.png'
             },
             {
                 rel: 'manifest',
-                href: './icons/site.webmanifest'
+                href: 'https://beta-cdn.pylon.gg/icons/site.webmanifest'
             },
             {
                 rel: 'mask-icon',
-                href: './icons/safari-pinned-tab.svg',
+                href: 'https://beta-cdn.pylon.gg/icons/safari-pinned-tab.svg',
                 color: '#9a3dff'
             },
             {
@@ -88,20 +88,19 @@ export default {
          */
         extend(config, ctx) {}
     },
-    generate: {
-        async routes() {
-            const { $content } = require('@nuxt/content')
-            const files = await $content()
-                .only(['path'])
-                .fetch()
+    // generate: {
+    //     async routes() {
+    //         const { $content } = require('@nuxt/content')
+    //         const files = await $content()
+    //             .only(['path'])
+    //             .fetch()
 
-            return files.map((file) =>
-                file.path === '/index' ? '/' : file.path
-            )
-        }
-    },
+    //         return files.map((file) =>
+    //             file.path === '/index' ? '/' : file.path
+    //         )
+    //     }
+    // },
     router: {
-        prefetchLinks: false,
-        trailingSlash: false
+        prefetchLinks: false
     }
 }
