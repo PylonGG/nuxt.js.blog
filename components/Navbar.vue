@@ -3,7 +3,7 @@
         <div class="col-1-3 left">
             <nuxt-link to="/" class="logo-container">
                 <Logo width="30px" height="30px"></Logo>
-                <span>Blog</span>
+                <span><span id="accent">|</span> blog</span>
             </nuxt-link>
         </div>
         <div class="col-1-3 center">
@@ -318,10 +318,14 @@ export default {
         text-decoration: none;
 
         span {
-            margin-left: 10px;
+            margin-left: 4px;
             font-size: 1.2rem;
             font-weight: 400;
-            color: $white;
+            color: #d7ceff;
+
+            #accent {
+                opacity: 0.15;
+            }
         }
     }
 
@@ -351,11 +355,11 @@ export default {
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        width: 15%;
+        width: 20%;
 
         .logo-container {
             height: 100%;
-            padding: 0 10px;
+            padding: 0 12.5px;
             background: $primary;
             margin-right: 15px;
 
@@ -373,7 +377,7 @@ export default {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 70%;
+        width: 60%;
 
         @media only screen and (max-width: 820px) {
             display: none;
@@ -386,7 +390,7 @@ export default {
         justify-content: flex-end;
         padding-right: 10px;
         position: relative;
-        width: 15%;
+        width: 20%;
 
         @media only screen and (max-width: 820px) {
             display: none;

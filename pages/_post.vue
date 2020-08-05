@@ -6,21 +6,83 @@
                 <div class="author">
                     <div class="author-image">
                         <svg
-                            width="32"
-                            height="32"
-                            viewBox="0 0 24 24"
-                            fill="none"
+                            xmlns:dc="http://purl.org/dc/elements/1.1/"
+                            xmlns:cc="http://creativecommons.org/ns#"
+                            xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                            xmlns:svg="http://www.w3.org/2000/svg"
                             xmlns="http://www.w3.org/2000/svg"
+                            id="svg11"
+                            xml:space="preserve"
+                            enable-background="new 0 0 200 200"
+                            viewBox="0 0 200 200"
+                            y="0px"
+                            x="0px"
+                            version="1.1"
+                            width="30px"
                         >
+                            <metadata id="metadata15">
+                                <rdf:RDF
+                                    ><cc:Work rdf:about=""
+                                        ><dc:format>image/svg+xml</dc:format
+                                        ><dc:type
+                                            rdf:resource="http://purl.org/dc/dcmitype/StillImage"/></cc:Work
+                                ></rdf:RDF>
+                            </metadata>
+                            <defs id="defs103145" />
+                            <linearGradient
+                                spreadMethod="pad"
+                                y2="30%"
+                                x2="-10%"
+                                y1="120%"
+                                x1="30%"
+                                id="3d_gradient2-logo-8cdf6509-3314-4409-b647-bca88f1d495a"
+                            >
+                                <stop
+                                    id="stop103122"
+                                    stop-opacity="1"
+                                    stop-color="#ffffff"
+                                    offset="0%"
+                                />
+                                <stop
+                                    id="stop103124"
+                                    stop-opacity="1"
+                                    stop-color="#000000"
+                                    offset="100%"
+                                />
+                            </linearGradient>
+                            <linearGradient
+                                gradientTransform="rotate(-30)"
+                                spreadMethod="pad"
+                                y2="30%"
+                                x2="-10%"
+                                y1="120%"
+                                x1="30%"
+                                id="3d_gradient3-logo-8cdf6509-3314-4409-b647-bca88f1d495a"
+                            >
+                                <stop
+                                    id="stop103127"
+                                    stop-opacity="1"
+                                    stop-color="#ffffff"
+                                    offset="0%"
+                                />
+                                <stop
+                                    id="stop103129"
+                                    stop-opacity="1"
+                                    stop-color="#cccccc"
+                                    offset="50%"
+                                />
+                                <stop
+                                    id="stop103131"
+                                    stop-opacity="1"
+                                    stop-color="#000000"
+                                    offset="100%"
+                                />
+                            </linearGradient>
                             <path
-                                fill-rule="evenodd"
-                                clip-rule="evenodd"
-                                d="M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7ZM14 7C14 8.10457 13.1046 9 12 9C10.8954 9 10 8.10457 10 7C10 5.89543 10.8954 5 12 5C13.1046 5 14 5.89543 14 7Z"
-                                fill="currentColor"
-                            />
-                            <path
-                                d="M16 15C16 14.4477 15.5523 14 15 14H9C8.44772 14 8 14.4477 8 15V21H6V15C6 13.3431 7.34315 12 9 12H15C16.6569 12 18 13.3431 18 15V21H16V15Z"
-                                fill="currentColor"
+                                stroke-miterlimit="2"
+                                d="m 141.5263,67.473669 c -2.36842,-5.368421 -5.52631,-10.105263 -9.63158,-14.36842 -4.26315,-4.105263 -9,-7.263158 -14.36842,-9.631579 -5.52631,-2.368421 -11.36842,-3.473684 -17.526312,-3.473684 -6,0 -12,1.105263 -17.526315,3.473684 -5.368421,2.368421 -10.105263,5.526316 -14.368421,9.631579 -4.105263,4.105263 -7.263158,8.999999 -9.631579,14.36842 -2.210526,5.526316 -3.473684,11.368421 -3.473684,17.526316 v 67.105265 l 23.68421,7.89473 v -35.36842 c 1.263158,0.63158 2.526316,1.26316 3.789474,1.73684 5.526315,2.36843 11.526315,3.63158 17.526315,3.63158 6.000002,0 12.000002,-1.26315 17.526312,-3.63158 5.36842,-2.21052 10.10527,-5.36842 14.36842,-9.63157 4.10527,-4.10527 7.26316,-8.84211 9.63158,-14.21053 2.36842,-5.526316 3.47369,-11.526315 3.47369,-17.526315 0,-6.157895 -1.10527,-12 -3.47369,-17.526316 z M 99.999988,106.31577 c -11.68421,0 -21.315789,-9.631575 -21.315789,-21.315785 0,-11.684211 9.631579,-21.315789 21.315789,-21.315789 11.684212,0 21.315792,9.631578 21.315792,21.315789 0,11.68421 -9.63158,21.315785 -21.315792,21.315785 z"
+                                style="font-style:normal;font-weight:700;font-size:72px;line-height:1;font-family:'Brandmark1 Bold';font-variant-ligatures:normal;text-align:center;text-anchor:middle;fill:#d7ceff;stroke:#d7ceff;stroke-width:0;stroke-linejoin:miter;stroke-miterlimit:2"
+                                id="path103150"
                             />
                         </svg>
                     </div>

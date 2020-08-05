@@ -4,7 +4,7 @@ description: Learn about Pylon and our plans for development.
 author: Pylon Team
 category: Press
 date: 05/30/20
-image: /welcome.jpg
+image: /pylon_paper.png
 ---
 
 Today we are officially releasing the Pylon blog, this blog will serve as a messenger from our development team to anyone who is curious regarding the development and design of Pylon.
