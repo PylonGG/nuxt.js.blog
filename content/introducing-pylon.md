@@ -1,7 +1,7 @@
 ---
 title: Introducing Pylon, a gaming and technology based discussion platform
 description: Learn about Pylon and our plans for development.
-author: Brett Kubiak
+author: Pylon Team
 category: Press
 date: 05/30/20
 image: /welcome.jpg
