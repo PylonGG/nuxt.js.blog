@@ -175,7 +175,7 @@
                                 />
                             </svg>
                         </a>
-                        <a target="_blank" href="https://twitter.com/PyIonGG">
+                        <a target="_blank" href="https://twitter.com/pylon_gg">
                             <svg
                                 role="img"
                                 width="16px"
