@@ -54,7 +54,7 @@
             <a
                 rel="noreferrer"
                 target="_blank"
-                href="https://twitter.com/PyIonGG"
+                href="https://twitter.com/pylon_gg"
             >
                 <svg
                     role="img"
@@ -175,7 +175,10 @@
                                 />
                             </svg>
                         </a>
-                        <a target="_blank" href="https://twitter.com/pylon_gg">
+                        <a
+                            target="_blank"
+                            href="https://twitter.com/pylon_ggdep"
+                        >
                             <svg
                                 role="img"
                                 width="16px"
@@ -356,6 +359,10 @@ export default {
         align-items: center;
         justify-content: flex-start;
         width: 20%;
+
+        @media only screen and (max-width: 692px) {
+            width: 50%;
+        }
 
         .logo-container {
             height: 100%;

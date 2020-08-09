@@ -111,10 +111,10 @@ export default {
             rgba(18, 19, 36, 0.55) 75%,
             rgba(18, 19, 36, 0.4)
         );
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
+        top: -20px;
+        bottom: -20px;
+        left: -20px;
+        right: -20px;
         z-index: 0;
     }
 }
