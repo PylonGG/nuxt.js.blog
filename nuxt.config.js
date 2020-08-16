@@ -18,7 +18,11 @@ export default {
             }
         ],
         link: [
-            { rel: 'icon', type: 'image/x-icon', href: './icons/favicon.ico' },
+            {
+                rel: 'icon',
+                type: 'image/x-icon',
+                href: 'https://beta-cdn.pylon.gg/icons/favicon.ico'
+            },
             {
                 rel: 'icon',
                 type: 'image/png',
